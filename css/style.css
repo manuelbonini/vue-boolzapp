@@ -11,6 +11,9 @@ img {
 .container {
     max-width: 75%;
     margin: auto;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
 }
 /* container con le colonne */
 .col-container {
@@ -18,16 +21,19 @@ img {
     flex-direction: row;
 }
 
-.col-left {
-    width: 30%;
+.user-name {
     border-right: 1px solid gray;
 }
+
+.col-left {
+    width: 35%;
+}
 .col-right {
-    width: 70%;
+    width: 65%;
 }
 
 .top-bar {
-    height: 50px;
+    height: 60px;
     background-color: #eaeaea;
 }
 
@@ -39,7 +45,7 @@ img {
 
 /* logo */
 .logo {
-    width: 35px;
+    width: 50px;
     padding-left: 10px;
 }
 .logo img {
@@ -54,4 +60,51 @@ img {
 .icons i {
     padding-right: 10px;
     color: #b1b1b1;
+    font-size: 20px;
+}
+
+.font-text p {
+    font-size: 11px;
+    color: #81878a;
+}
+/* notification */
+.notification {
+    background-color: #9ed9f8;
+    height: 65px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.mute {
+    background-color: white;
+    color: #9ed9f8;
+    font-size: 15px;
+    display: flex;
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+.mute-text {
+    padding-left: 10px;
+}
+.mute-text h2 {
+    font-size: 12px;
+}
+.mute-text p {
+    font-size: 11px;
+    text-decoration: underline;
+    color: #81878a;
+    cursor: pointer;
+}
+/* filter */
+.user-filter {
+    background-color: #fafafa;
+}
+.user-filter input {
+    padding: 5px;
+    width: 100%;
+    margin: 5px;
 }
