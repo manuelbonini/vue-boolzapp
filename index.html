@@ -58,15 +58,22 @@
                        <!-- filter -->
                        <div class="user-filter">
                            <span><i class="fas fa-search"></i></span>
-                           <input type="text" placeholder="Cerca o inizia una nuova chat">
+                           <input 
+                                type="text" 
+                                placeholder="Cerca o inizia una nuova chat"
+                                v-model="userFilter"
+                                @keyup="filterUser"
+                            >
                        </div>
    
                        <!-- user list -->
                        <div class="user-list">
                            <div>
                                <ul>
+                                   <!-- con il v-if me li stampa solo se visible è true -->
                                    <li 
                                         v-for="(contact, index) in contacts" 
+                                        v-if="contact.visible"
                                         class="contact-user" 
                                         :class="{ 'active' : index == activeContact}"
                                         @click="setActiveContact(index)"

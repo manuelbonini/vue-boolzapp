@@ -6,6 +6,7 @@ var app = new Vue(
         data: {
             activeContact: 0,
             inputMessage: '',
+            userFilter: '',
             contacts: [
                 {
                     name: 'Michele',
@@ -126,6 +127,21 @@ var app = new Vue(
 
                     this.contacts[this.activeContact].messages.push(newReplyMessage);
                 },1000);
+            },
+            filterUser() {
+                // trasformo il nome in casratteri minuscoli
+                const userNameLowerCase= this.userFilter.toLowerCase();
+
+                this.contacts.forEach((contact) =>{
+                    const contactLowerCase= contact.name.toLowerCase();
+                    console.log(contactLowerCase);
+
+                    if( contactLowerCase.includes(userNameLowerCase) ) {
+                        contact.visible= true;
+                    }else {
+                        contact.visible= false;
+                    }
+                });
             }
         }    
     }
