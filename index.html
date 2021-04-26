@@ -112,10 +112,25 @@
                                     </div>
                                 </div>
                             </div>
-
+                            <!-- parte sotto con l'input del testo da inviare -->
                             <div class="text-message">
-                                ghghgh
-                            </div>
+                                <div class="emoji">
+                                    <i class="far fa-smile"></i>
+                                </div>
+
+                                <div class="message-input-text">
+                                    <input 
+                                        type="text" 
+                                        placeholder="Scrivi un messaggio"
+                                        v-model="inputMessage" 
+                                        @keyup.enter="pushNewMessage"
+                                    > <!-- quello che l'utente scrive viene inserito in inputMessage -->
+                                </div>
+
+                                <div class="record-voice">
+                                    <i class="fas fa-microphone"></i>
+                                </div>
+                            </div> 
                        </div>
                    </div>
                </div>

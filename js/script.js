@@ -5,6 +5,7 @@ var app = new Vue(
         el: '#root',
         data: {
             activeContact: 0,
+            inputMessage: '',
             contacts: [
                 {
                     name: 'Michele',
@@ -102,6 +103,18 @@ var app = new Vue(
             // funzione per rendere attivo un contatto tramite il click
             setActiveContact(index) {
                 this.activeContact= index;
+            },
+            // funzione che inserisce il messaggio dentro l'array messages
+            pushNewMessage() {
+                const newMessage = {
+                    date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
+                    text: this.inputMessage,
+                    status: 'sent'
+                };
+
+                this.contacts[this.activeContact].messages.push(newMessage);
+
+                this.inputMessage= '';
             }
         }    
     }

@@ -192,6 +192,27 @@ img {
     right: 15px;
     font-size: 10px;
 }
+
+/* INPUT TEXT MESSAGES TO SENT */
 .text-message {
     background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px;
+}
+.text-message .emoji,
+.text-message .record-voice {
+    font-size: 25px;
+    padding: 20px;
+    color: #6c7376;
+}
+.text-message .message-input-text {
+    flex-grow: 1;
+}
+.text-message .message-input-text input {
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #6c7376;
 }
