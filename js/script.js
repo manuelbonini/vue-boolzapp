@@ -113,8 +113,19 @@ var app = new Vue(
                 };
 
                 this.contacts[this.activeContact].messages.push(newMessage);
-
+                // cancella il testo scritto dall'utente nell'input
                 this.inputMessage= '';
+
+                // risposta al messaggio inviato con ok
+                setTimeout(() =>{
+                    const newReplyMessage= {
+                        date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
+                        text: 'ok',
+                        status: 'recived'
+                    };
+
+                    this.contacts[this.activeContact].messages.push(newReplyMessage);
+                },1000);
             }
         }    
     }
