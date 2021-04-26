@@ -8,9 +8,20 @@ img {
     width: 100%;
 }
 
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    background-color: #dadad4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .container {
-    max-width: 75%;
-    margin: auto;
+    width: 75%;
+    height: 95%;
+    min-width: 1024px;
+    /* margin: auto; */
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     font-size: 14px;
@@ -19,6 +30,7 @@ img {
 .col-container {
     display: flex;
     flex-direction: row;
+    height: 100%;
 }
 
 .user-name {
@@ -27,6 +39,7 @@ img {
 
 .col-left {
     width: 35%;
+    background-color: white;
 }
 .col-right {
     width: 65%;
@@ -42,6 +55,7 @@ img {
     flex-direction: row;
     align-items: center;
 }
+/* LEFT COL */
 
 /* logo */
 .logo {
@@ -102,9 +116,82 @@ img {
 /* filter */
 .user-filter {
     background-color: #fafafa;
+    padding: 5px;
+    display: flex;
+}
+.user-filter span {
+    text-align: center;
+    width: 40px;
+    background-color: white;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid grey;
+    border-right: 0;
 }
 .user-filter input {
     padding: 5px;
     width: 100%;
-    margin: 5px;
+    height: 30px;
+    border: 1px solid grey;
+    border-left: 0;
+}
+
+/* user list */
+.user-list li {
+    list-style-type: none;
+    padding: 15px 10px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+.user-list li img {
+    width: 40px;
+    border-radius: 50%;
+}
+.user-list li h3 {
+    padding-left: 10px;
+}
+.contact-user {
+    font-size: 16px;
+}
+.contact-user.active {
+    background-color: grey;
+}
+/* RIGHT COL */
+
+/* chat */
+.chat {
+    height: calc(100% - 60px);
+    display: flex;
+    flex-direction: column;
+}
+.messages {
+    background-image: url("../img/mine.jpg");
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 20px;
+}
+.message {
+    min-width: 150px;
+    max-width: 350px;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    background-color: white;
+    clear: both;
+    position: relative;
+}
+.message.sent {
+    background-color: lightgreen;
+    float: right;
+}
+.message-date {
+    position: absolute;
+    bottom: 3px;
+    right: 15px;
+    font-size: 10px;
+}
+.text-message {
+    background-color: white;
 }

@@ -4,6 +4,7 @@ var app = new Vue(
     {
         el: '#root',
         data: {
+            activeContact: 0,
             contacts: [
                 {
                     name: 'Michele',
@@ -91,7 +92,17 @@ var app = new Vue(
             ]
         },
         methods: {
-            
-        }
+            // funzione che compone l'src in base al numero dell'array
+            nameImage(index) {
+                let image='img/avatar';
+                let type = '.jpg';
+                image += this.contacts[index].avatar + type;
+                return image;
+            },
+            // funzione per rendere attivo un contatto tramite il click
+            setActiveContact(index) {
+                this.activeContact= index;
+            }
+        }    
     }
 );
